@@ -1,7 +1,13 @@
+import * as SC from "./RegisterPageStyled";
+
 import { useFormik } from "formik";
 import { validationAuth } from "../utils/validation";
+import { useNavigate } from "react-router-dom";
 
 const RegisterPage: React.FC = () => {
+
+const navigate = useNavigate();
+
   const formik = useFormik({
     initialValues: {
       user: "",
@@ -10,35 +16,45 @@ const RegisterPage: React.FC = () => {
     validationSchema: validationAuth,
     onSubmit: (values) => {
       console.log("Submitted values:", values);
+      localStorage.setItem("users", JSON.stringify(values));
+      navigate("/")
+      alert("Registration successful!");
     },
   });
 
   return (
-    <div>
-      <div>
-        <h3>Please Register</h3>
-        <form>
-          <label htmlFor="user">
-            User
-            <input
-              type="text"
-              name="user"
-              id="user"
-              placeholder="e.g. Vsevolodych"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            />
-          </label>
-          <label htmlFor="password">
-            Password
-            <input type="text" name="password"  id="user"
-              placeholder="*******"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}/>
-          </label>
-        </form>
-      </div>
-    </div>
+    <SC.RegisterPageCon>
+      <h3>Please Register</h3>
+      <form onSubmit={formik.handleSubmit}>
+        <SC.RegisterLabel htmlFor="user">
+          <span>User</span>
+
+          <input
+            type="text"
+            name="user"
+            id="user"
+            placeholder="e.g. Vsevolodych"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.user}
+          />
+        </SC.RegisterLabel>
+        <SC.RegisterLabel htmlFor="password">
+          <span> Password</span>
+
+          <input
+            type="text"
+            name="password"
+            id="password"
+            placeholder="*******"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.password}
+          />
+        </SC.RegisterLabel>
+        <SC.SubmitBtn type="submit">Register</SC.SubmitBtn>
+      </form>
+    </SC.RegisterPageCon>
   );
 };
 
