@@ -2,8 +2,8 @@ import { Route, Routes } from "react-router-dom";
 import Logo from "./components/Logo/Logo";
 import { MenuBtn } from "./components/MenuBurger/MenuBurgerStyled";
 import Header from "./layouts/Header/Header";
-import SharedLayout from "./layouts/SharedLayout/SharedLayout";
 import BurgerMenuDashboard from "./components/BurgerMenuDashboard/BurgerMenuDashboard";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <MenuBtn />
       </Header>
       <Routes>
-        <Route path="/" element={<SharedLayout />} />
+        <Route path="/" element={<Home />} />
       </Routes>
       <BurgerMenuDashboard/>
     </div>
