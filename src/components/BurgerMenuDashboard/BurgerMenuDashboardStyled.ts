@@ -1,15 +1,37 @@
 import styled from "@emotion/styled";
 
 type Props = {
-    isFeatures: boolean;
-    isCompany: boolean;
-}
+  isFeatures: boolean;
+  isCompany: boolean;
+};
+
+export const Wrapper = styled.div`
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  background-color: rgba(0, 0, 0, 0.7);
+
+`;
 
 export const BurgerMenuDashboardCon = styled.div`
+width: 64%;
+
   padding-top: 22px;
   padding-bottom: 124px;
   padding-left: 24px;
   padding-right: 20px;
+
+  background-color: #fff;
 `;
 
 export const BurgerMenuDashboardBtnCon = styled.div`
@@ -29,21 +51,20 @@ export const DashboardList = styled.ul`
 `;
 
 export const Item = styled.li`
-
-&:not(:last-of-type){
+  &:not(:last-of-type) {
     margin-bottom: 24px;
-}
+  }
 
-& > a{
+  & > a {
     font-size: 16px;
     line-height: 1.6;
     font-weight: 500;
 
     color: #686868;
-}
-`
+  }
+`;
 
-export const ItemTitleCon = styled.div<Partial <Props>>`
+export const ItemTitleCon = styled.div<Partial<Props>>`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -59,43 +80,44 @@ export const ItemTitleCon = styled.div<Partial <Props>>`
     color: #686868;
   }
 
-  & img {
-  transform: ${({ isFeatures, isCompany }) => isFeatures || isCompany ? "rotate(180deg)" : "rotate(0deg)"};
-}
+  & > button{
+    background-color: transparent;
+  }
 
+  & img {
+    transform: ${({ isFeatures, isCompany }) =>
+      isFeatures || isCompany ? "rotate(180deg)" : "rotate(0deg)"};
+  }
 `;
 
-export const SubList = styled.ul<Partial <Props>>`
+export const SubList = styled.ul<Partial<Props>>`
+  display: ${({ isFeatures, isCompany }) =>
+    isFeatures || isCompany ? "block" : "none"};
 
-display: ${({isFeatures, isCompany}) => isFeatures || isCompany ? "block" : "none"};
-
-
-padding-top: 24px;
-
-`
+  padding-top: 24px;
+`;
 
 export const SubItem = styled.li`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: flex-start;
+  padding-left: 24px;
 
-padding-left: 24px;
-
-&:not(:last-of-type){
+  &:not(:last-of-type) {
     margin-bottom: 16px;
-}
+  }
 
-& > img{
+  & > img {
     margin-right: 16px;
-}
+  }
 
-& > a{
+  & > a {
     font-size: 16px;
     line-height: 1.6;
     font-weight: 500;
 
     color: #686868;
-}
-`
+  }
+`;
