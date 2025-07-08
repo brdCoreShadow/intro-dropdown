@@ -1,9 +1,14 @@
-import * as SC from "./SharedLayoutStyled"
+import Hero from "@/components/Hero/Hero";
+import * as SC from "./SharedLayoutStyled";
+import Partners from "@/components/Partners/Partners";
 
-import { PropsChildren } from "@/utils/types";
-
-const SharedLayout:React.FC<PropsChildren> = ({ children }) => {
-  return <SC.SharedLayoutCon>{children}</SC.SharedLayoutCon>;
+const SharedLayout: React.FC = () => {
+  return (
+    <SC.SharedLayoutCon>
+      <Hero />
+      <Partners />
+    </SC.SharedLayoutCon>
+  );
 };
 
 export default SharedLayout;

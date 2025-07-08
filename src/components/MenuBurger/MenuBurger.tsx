@@ -1,11 +1,15 @@
-import * as SC from "./MenuBurgerStyled";
+import * as SC from "./MenuBurgerStyled"
 
-const MenuBurger: React.FC = () => {
-  return (
-    <div>
-      <SC.MenuBtn></SC.MenuBtn>
-    </div>
-  );
-};
+import burgerIcon from "../../assets/images/icon-menu.svg"
 
+const MenuBurger:React.FC = () => {
+    return ( 
+        <div>
+            <SC.MenuBtn>
+                <img src={burgerIcon} alt="burger" />
+            </SC.MenuBtn>
+        </div>
+     );
+}
+ 
 export default MenuBurger;
