@@ -7,15 +7,23 @@ import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import { useToggleMenu } from "./hooks/useToggleMenu";
 import MenuBurger from "./components/MenuBurger/MenuBurger";
 import LoginPage from "./pages/LoginPage/LoginPage";
+import { useScreenSize } from "./hooks/useScreenSize";
+import AuthBoard from "./components/AuthBoard/AuthBoard";
+import DashBoard from "./components/BurgerMenuDashboard/Dashboard";
 
 function App() {
   const { isMenu, openMenu, closeMenu } = useToggleMenu();
+  const {isDesktop} = useScreenSize()
 
   return (
     <div>
       <Header>
+        <div>
         <Logo />
-        <MenuBurger openMenu={openMenu} />
+        {isDesktop && <DashBoard/>}
+        </div>
+        {isDesktop ? <AuthBoard/> :  <MenuBurger openMenu={openMenu} />}
+       
       </Header>
       <Routes>
         <Route path="/" element={<Home />} />

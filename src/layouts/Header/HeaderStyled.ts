@@ -10,4 +10,11 @@ padding-top: 16px;
 padding-bottom: 24px;
 padding-left: 16px;
 padding-right: 16px;
+
+@media (min-width: 1280px){
+    padding-top: 20px;
+    padding-bottom: 58px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
 `

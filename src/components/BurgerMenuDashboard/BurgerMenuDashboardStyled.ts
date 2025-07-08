@@ -21,6 +21,9 @@ export const Wrapper = styled.div`
 
   background-color: rgba(0, 0, 0, 0.7);
 
+@media (min-width: 1280px){
+    position: static;
+}
 `;
 
 export const BurgerMenuDashboardCon = styled.div`
@@ -32,6 +35,13 @@ width: 64%;
   padding-right: 20px;
 
   background-color: #fff;
+
+  @media (min-width: 1280px){
+    width: auto;
+
+    padding: 0;
+
+  }
 `;
 
 export const BurgerMenuDashboardBtnCon = styled.div`
@@ -48,11 +58,22 @@ export const CloseBtn = styled.button`
 export const DashboardList = styled.ul`
   padding-top: 32px;
   padding-bottom: 32px;
+
+  @media (min-width: 1280px){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 `;
 
 export const Item = styled.li`
   &:not(:last-of-type) {
     margin-bottom: 24px;
+
+    @media (min-width: 1280px){
+        margin-bottom: 0;
+        margin-right: 40px;
+    }
   }
 
   & > a {
