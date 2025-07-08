@@ -15,8 +15,8 @@ const navigate = useNavigate();
     },
     validationSchema: validationAuth,
     onSubmit: (values) => {
-      console.log("Submitted values:", values);
       localStorage.setItem("users", JSON.stringify(values));
+      
       navigate("/")
       alert("Registration successful!");
     },
