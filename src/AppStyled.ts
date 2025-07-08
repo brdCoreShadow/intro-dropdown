@@ -1,5 +1,10 @@
 import styled from "@emotion/styled";
 
 export const AppCon = styled.div`
-overflow:hidden
+`
+
+export const DeskHeaderSubCon = styled.div`
+display: flex;
+flex-direction: row;
+align-items: center;
 `

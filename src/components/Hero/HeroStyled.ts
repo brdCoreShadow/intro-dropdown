@@ -1,17 +1,34 @@
 import styled from "@emotion/styled";
 
 export const HeroCon = styled.div`
-margin-bottom: 48px;
+  margin-bottom: 48px;
+
+  @media (min-width: 1280px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    margin-bottom: 0;
+  }
 `;
 
 export const HeroPicThumb = styled.div`
   margin-bottom: 48px;
 
+  @media (min-width: 1280px) {
+    margin-bottom: 0;
+  }
 `;
 
 export const HeroDashboard = styled.div`
-text-align: center;
-`
+  text-align: center;
+
+  @media (min-width: 1280px) {
+padding-right: 126px;
+
+    text-align: left;
+  }
+`;
 
 export const HeroContentCon = styled.div`
   margin-bottom: 48px;
@@ -20,6 +37,10 @@ export const HeroContentCon = styled.div`
   padding-right: 16px;
 
   text-align: center;
+
+  @media (min-width: 1280px) {
+    text-align: left;
+  }
 
   & > h3 {
     margin-bottom: 16px;
@@ -31,27 +52,30 @@ export const HeroContentCon = styled.div`
     color: #000;
   }
 
-
-    & > p{
-        font-size: 16px;
-        line-height: 1.6;
-        font-weight: 500;
-        color: #686868;
-    }
+  & > p {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 500;
+    color: #686868;
+  }
 `;
 
 export const HeroBtn = styled.button`
-width: 120px;
+  width: 120px;
 
-padding-top:12px;
-padding-bottom: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 
-font-size: 16px;
-line-height: 1.6;
-letter-spacing: -0.22px;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.22px;
 
-background-color: #151515;
-color: #FAFAFA;
+  background-color: #151515;
+  color: #fafafa;
 
-border-radius: 16px;
-`
+  border-radius: 16px;
+
+  @media (min-width: 1280px) {
+    margin-bottom: 52px;
+  }
+`;

@@ -21,13 +21,13 @@ export const Wrapper = styled.div`
 
   background-color: rgba(0, 0, 0, 0.7);
 
-@media (min-width: 1280px){
+  @media (min-width: 1280px) {
     position: static;
-}
+  }
 `;
 
 export const BurgerMenuDashboardCon = styled.div`
-width: 64%;
+  width: 64%;
 
   padding-top: 22px;
   padding-bottom: 124px;
@@ -36,11 +36,10 @@ width: 64%;
 
   background-color: #fff;
 
-  @media (min-width: 1280px){
+  @media (min-width: 1280px) {
     width: auto;
 
     padding: 0;
-
   }
 `;
 
@@ -59,7 +58,7 @@ export const DashboardList = styled.ul`
   padding-top: 32px;
   padding-bottom: 32px;
 
-  @media (min-width: 1280px){
+  @media (min-width: 1280px) {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -70,9 +69,9 @@ export const Item = styled.li`
   &:not(:last-of-type) {
     margin-bottom: 24px;
 
-    @media (min-width: 1280px){
-        margin-bottom: 0;
-        margin-right: 40px;
+    @media (min-width: 1280px) {
+      margin-bottom: 0;
+      margin-right: 40px;
     }
   }
 
@@ -82,6 +81,22 @@ export const Item = styled.li`
     font-weight: 500;
 
     color: #686868;
+
+    @media (min-width: 1280px) {
+      font-size: 14px;
+
+      transition: color 0.3s;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: #151515;
+
+        cursor: pointer;
+
+        transition: color 0.3s;
+      }
+    }
   }
 `;
 
@@ -91,6 +106,18 @@ export const ItemTitleCon = styled.div<Partial<Props>>`
   align-items: center;
   justify-content: flex-start;
 
+  @media (min-width: 1280px) {
+    &:hover,
+    &:active,
+    &:focus {
+      cursor: pointer;
+
+      & > h3 {
+        color: #151515;
+      }
+    }
+  }
+
   & > h3 {
     margin-right: 24px;
 
@@ -99,9 +126,13 @@ export const ItemTitleCon = styled.div<Partial<Props>>`
     font-weight: 500;
 
     color: #686868;
+
+    @media (min-width: 1280px) {
+      font-size: 14px;
+    }
   }
 
-  & > button{
+  & > button {
     background-color: transparent;
   }
 

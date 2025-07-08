@@ -1,3 +1,5 @@
+import * as SC from "./AppStyled"
+
 import { Route, Routes } from "react-router-dom";
 import Logo from "./components/Logo/Logo";
 import Header from "./layouts/Header/Header";
@@ -18,10 +20,10 @@ function App() {
   return (
     <div>
       <Header>
-        <div>
+        <SC.DeskHeaderSubCon>
         <Logo />
         {isDesktop && <DashBoard/>}
-        </div>
+        </SC.DeskHeaderSubCon>
         {isDesktop ? <AuthBoard/> :  <MenuBurger openMenu={openMenu} />}
        
       </Header>
