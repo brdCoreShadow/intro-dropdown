@@ -34,6 +34,8 @@ export const BurgerMenuDashboardCon = styled.div`
   padding-left: 24px;
   padding-right: 20px;
 
+background-color: #FAFAFA;
+
   @media (min-width: 1280px) {
     width: auto;
 
