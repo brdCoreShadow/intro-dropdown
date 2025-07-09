@@ -31,8 +31,8 @@ const DashBoard: React.FC<Partial<Props>> = ({ closeMenu }) => {
         <SC.DashboardList>
           <SC.Item>
             <SC.ItemTitleCon isFeatures={isFeatures ?? false}>
-              <h3>Features</h3>
               <button onClick={toggleFeatures}>
+                <h3>Features</h3>
                 <img src={arrorIcon} alt="arrow" />
               </button>
             </SC.ItemTitleCon>
@@ -57,12 +57,13 @@ const DashBoard: React.FC<Partial<Props>> = ({ closeMenu }) => {
           </SC.Item>
           <SC.Item>
             <SC.ItemTitleCon isCompany={isCompany ?? false}>
-              <h3>Company</h3>
+             
               <button onClick={toggleCompany}>
+                 <h3>Company</h3>
                 <img src={arrorIcon} alt="arrow" />
               </button>
             </SC.ItemTitleCon>
-            <SC.SubList isCompany={isCompany ?? false}>
+            <SC.SubList isCompany={isCompany ?? false}style={{transform:"translate(0%, 110%)"}}>
               <SC.SubItem>
                 <a href="#">History</a>
               </SC.SubItem>

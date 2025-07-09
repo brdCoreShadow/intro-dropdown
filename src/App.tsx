@@ -18,7 +18,7 @@ function App() {
   const {isDesktop} = useScreenSize()
 
   return (
-    <div>
+    <SC.AppCon>
       <Header>
         <SC.DeskHeaderSubCon>
         <Logo />
@@ -33,7 +33,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
       </Routes>
       {isMenu && <BurgerMenuDashboard closeMenu={closeMenu} isMenu={isMenu} />}
-    </div>
+    </SC.AppCon>
   );
 }
 

@@ -34,8 +34,6 @@ export const BurgerMenuDashboardCon = styled.div`
   padding-left: 24px;
   padding-right: 20px;
 
-  background-color: #fff;
-
   @media (min-width: 1280px) {
     width: auto;
 
@@ -66,6 +64,11 @@ export const DashboardList = styled.ul`
 `;
 
 export const Item = styled.li`
+  @media (min-width: 1280px) {
+    position: relative;
+
+  }
+
   &:not(:last-of-type) {
     margin-bottom: 24px;
 
@@ -118,7 +121,7 @@ export const ItemTitleCon = styled.div<Partial<Props>>`
     }
   }
 
-  & > h3 {
+  & h3 {
     margin-right: 24px;
 
     font-size: 16px;
@@ -133,7 +136,27 @@ export const ItemTitleCon = styled.div<Partial<Props>>`
   }
 
   & > button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
     background-color: transparent;
+
+    @media (min-width: 1280px) {
+      transition: color 0.3s;
+
+      &:focus,
+      &:hover,
+      &:active {
+        & h3 {
+          color: #151515;
+        }
+
+        cursor: pointer;
+
+        transition: color 0.3s;
+      }
+    }
   }
 
   & img {
@@ -144,9 +167,30 @@ export const ItemTitleCon = styled.div<Partial<Props>>`
 
 export const SubList = styled.ul<Partial<Props>>`
   display: ${({ isFeatures, isCompany }) =>
-    isFeatures || isCompany ? "block" : "none"};
+    isFeatures || isCompany ? "inline-block" : "none"};
 
   padding-top: 24px;
+
+  @media (min-width: 1280px) {
+    width: 180px;
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    transform: translate(-50%, 110%);
+
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    background-color: #fff;
+
+    border-radius: 10px;
+
+  }
 `;
 
 export const SubItem = styled.li`
