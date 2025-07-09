@@ -24,7 +24,7 @@ export const HeroDashboard = styled.div`
   text-align: center;
 
   @media (min-width: 1280px) {
-padding-right: 126px;
+    padding-right: 110px;
 
     text-align: left;
   }
@@ -39,6 +39,8 @@ export const HeroContentCon = styled.div`
   text-align: center;
 
   @media (min-width: 1280px) {
+    margin-bottom: 52px;
+
     text-align: left;
   }
 
@@ -50,6 +52,12 @@ export const HeroContentCon = styled.div`
     letter-spacing: -0.5px;
 
     color: #000;
+
+    @media (min-width: 1280px) {
+      margin-bottom: 48px;
+
+      font-size: 80px;
+    }
   }
 
   & > p {
@@ -57,6 +65,10 @@ export const HeroContentCon = styled.div`
     line-height: 1.6;
     font-weight: 500;
     color: #686868;
+
+    @media (min-width: 1280px) {
+      font-size: 18px;
+    }
   }
 `;
 
@@ -76,6 +88,23 @@ export const HeroBtn = styled.button`
   border-radius: 16px;
 
   @media (min-width: 1280px) {
+    width: 164px;
+
     margin-bottom: 52px;
+
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #fff;
+      color: #151515;
+
+      border: 1px solid #151515;
+
+      cursor: pointer;
+
+      transition: all 0.3s;
+    }
   }
 `;
